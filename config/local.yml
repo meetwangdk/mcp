@@ -1,0 +1,43 @@
+env: local
+http:
+  #  host: 0.0.0.0
+  host: 127.0.0.1
+  port: 8000
+dingtalk:
+  client_id: "xxx"
+  client_secret: "xxx"
+
+es:
+  endpoint: "xxx"
+  username: "xxx"
+  password: "xxx"
+
+model:
+  analysis: "Qwen3-32B"
+  answer: "Qwen3-32B"
+  # analysis: "DeepSeek-V3.1"
+  # answer: "DeepSeek-V3.1"
+  url: "xxx"
+  token: "xxx"
+
+log:
+  log_level: debug
+  mode: both               #  file or console or both
+  encoding: console           # json or console
+  log_file_name: "./logs/hcsOne.log"
+  max_backups: 30
+  max_age: 7
+  max_size: 1024
+  compress: true
+
+mcp:
+  mcp_servers:
+    - server1:
+        host: http://127.0.0.1
+        port: 8000
+    - server2:
+        host: http://127.0.0.1
+        port: 8001
+    - server3:
+        host: http://127.0.0.1
+        port: 8002
